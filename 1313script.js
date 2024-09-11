@@ -86,3 +86,22 @@ ScrollTrigger.batch(".room_gallery_item", {
     delay: 0.25,
   }),
 });
+
+document.querySelectorAll('.w-condition-invisible').forEach(function (element) {
+  element.classList.remove('swiper-slide');
+});
+
+const swiper = new Swiper('.room-swiper', {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  speed: 750,
+  centeredSlides: true,
+});
